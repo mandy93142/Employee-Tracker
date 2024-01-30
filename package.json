@@ -9,6 +9,8 @@
   "author": "mandy",
   "license": "ISC",
   "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^16.4.1",
     "inquirer": "^8.2.4",
     "mysql2": "^3.9.1"
   }
