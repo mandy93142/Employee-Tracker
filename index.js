@@ -206,4 +206,42 @@ function addDepartment() {
         throw err;
       });
   }
+
+  // Update employee role
+  function updateEmployeeRole() {
+    let employees, roles;
+    connection.promise().query('SELECT id, CONCAT(first_name, " ", last_name) AS name FROM employee')
+      .then(([rows]) => {
+        employees = rows;
+        return connection.promise().query('SELECT id, title FROM role');
+      })
+      .then(([rows]) => {
+        roles = rows;
+        return inquirer.prompt([
+          {
+            name: 'employee',
+            type: 'list',
+            choices: employees.map(emp => ({ name: emp.name, value: emp.id })),
+            message: 'Which employee\'s role do you want to update?'
+          },
+          {
+            name: 'role',
+            type: 'list',
+            choices: roles.map(role => ({ name: role.title, value: role.id })),
+            message: 'What is the new role for this employee?'
+          }
+        ]);
+      })
+      .then(answer => {
+        const query = 'UPDATE employee SET role_id = ? WHERE id = ?';
+        connection.query(query, [answer.role, answer.employee], (err, res) => {
+          if (err) throw err;
+          console.log('Employee role updated successfully!');
+          mainMenu();
+        });
+      })
+      .catch(err => {
+        throw err;
+      });
+  }
   
