@@ -1,7 +1,7 @@
 # Employee-Tracker
 SQL Challenge: Employee Tracker
 
-Link to the video: 
+Link to the video: https://drive.google.com/file/d/1gqkFuFOD3BKJ68IwXaW3zaqvIXypvZtj/view
 
 ## Overview
 
