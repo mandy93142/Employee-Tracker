@@ -12,7 +12,7 @@ Developers frequently have to create interfaces that allow non-developers to eas
 The Employee Tracker is a versatile command-line application designed to streamline the management of company personnel data. Upon launching, users are greeted with a range of options, including the ability to view all departments, roles, and employees in neatly formatted tables. These tables not only display names and IDs but also offer detailed insights into job titles, department affiliations, salaries, and managerial hierarchies. The application excels in its interactive capabilities, allowing users to effortlessly add new departments, roles, and employees into the system through straightforward prompts. Adding a department is as simple as entering its name, while creating a new role or employee involves inputting relevant details such as job titles, salaries, and departmental placement. Moreover, updating an employee's role is a seamless process, involving the selection of an employee and their new role, thereby ensuring the database remains current and reflective of the organization's evolving structure.
 
 ## Technologies
-- **npm packages:**
+-- **npm packages:**
 
 -- **inquirer@8.2.4:** Routing, Middleware Integration, and Handling API Requests and Responses.
 
